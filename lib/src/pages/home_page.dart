@@ -1,6 +1,8 @@
-// ignore_for_file: prefer_const_constructors
+// ignore_for_file: prefer_const_constructors, avoid_print
 
 import 'package:flutter/material.dart';
+import 'package:componentes/src/providers/menu_provider.dart';
+import 'package:componentes/src/providers/menu_provider.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -16,6 +18,8 @@ class HomePage extends StatelessWidget {
   }
 
   Widget _lista() {
+    print(MenuProvider.opciones);
+
     return ListView(
       children: _listaItems(),
     );
