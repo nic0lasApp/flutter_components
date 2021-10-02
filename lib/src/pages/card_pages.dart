@@ -13,12 +13,26 @@ class CardPage extends StatelessWidget {
       ),
       body: ListView(
         padding: EdgeInsets.all(20),
-        children: [_cardTipo1(), SizedBox(height: 30.0)],
+        children: [_cardTipo1(), SizedBox(height: 30.0), _cardTipo2()],
       ),
     );
   }
 
-  _cardTipo2() {}
+  Widget _cardTipo2() {
+    return Card(
+      child: Column(
+        children: <Widget>[
+          Image(
+            image: NetworkImage('https://picsum.photos/250?image=9'),
+          ),
+          Container(
+            padding: EdgeInsets.all(10.0),
+            child: Text('Na'),
+          )
+        ],
+      ),
+    );
+  }
 }
 
 Widget _cardTipo1() {
